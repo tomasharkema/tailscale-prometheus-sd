@@ -121,7 +121,7 @@ function tailscaleStateMonitor() {
   return eventChannel((emitter) => {
     const monitor = spawn(
       'tailscale',
-      ['debug', 'watch-ipn', '-netmap=true'],
+      ['debug', 'watch-ipn', '-netmap=true', '-initial=true'],
       {},
     )
 
